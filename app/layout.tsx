@@ -8,7 +8,7 @@ const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: 
 
 export const metadata: Metadata = {
   title: { default: "BizShield Pro — Cybersecurity Made Simple for Small Business", template: "%s | BizShield Pro" },
-  description: "Practical cybersecurity guides for small business owners. No jargon, just actionable steps to protect your business.",
+  description: "Cybersecurity for Small Business",
   metadataBase: new URL("https://bizshieldpro.co"),
 };
 
