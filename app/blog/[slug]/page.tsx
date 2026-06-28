@@ -132,20 +132,49 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             </div>
           )}
 
-          {/* Article body */}
+          {/* Hero image */}
+          <div className="my-6 rounded-xl overflow-hidden" style={{ border: "1px solid #1D2340" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`https://picsum.photos/seed/${post.slug}/900/380`}
+              alt={post.title}
+              className="w-full object-cover"
+              style={{ maxHeight: 380 }}
+            />
+          </div>
+
+          {/* Article body with sections */}
           <div className="prose-bz">
             <p className="text-lg" style={{ color: "#8A94C0" }}>{post.excerpt}</p>
-
-            <h2>What This Guide Covers</h2>
-            <p>We&apos;ve put together this guide after extensive research and real-world testing — no fluff, no filler. Jump to the section most relevant to your situation.</p>
-
-            <ul>
-              {post.tags.map((tag) => <li key={tag}>{tag}</li>)}
-            </ul>
-
-            <h2>Why Small Business Cybersecurity Matters More Than Ever</h2>
-            <p>Cyberattacks on small businesses have increased by 300% since 2020. The average cost of a data breach for a business with fewer than 500 employees is $120,000 — enough to close most small companies. Unlike large corporations, small businesses rarely have dedicated IT staff or incident response plans.</p>
-            <p>The good news: most attacks are preventable. The bad news: most small businesses skip the basics because they don&apos;t know where to start.</p>
+            {post.sections?.map((section, i) => (
+              <div key={i}>
+                <h2 style={{ fontFamily: "var(--font-space-grotesk)", color: "#EEF2FF" }}>{section.h2}</h2>
+                {i % 2 !== 0 && (
+                  <div className="my-5 rounded-xl overflow-hidden" style={{ border: "1px solid #1D2340" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`https://picsum.photos/seed/${post.slug}-${i}/900/360`}
+                      alt={section.h2}
+                      className="w-full object-cover"
+                      style={{ maxHeight: 360 }}
+                    />
+                  </div>
+                )}
+                {section.paras.map((para, j) => <p key={j}>{para}</p>)}
+                {section.list && (
+                  <ul>
+                    {section.list.map((item, k) => <li key={k}>{item}</li>)}
+                  </ul>
+                )}
+              </div>
+            ))}
+            {!post.sections && (
+              <>
+                <h2>Why Small Business Cybersecurity Matters More Than Ever</h2>
+                <p>Cyberattacks on small businesses have increased by 300% since 2020. The average cost of a data breach for a business with fewer than 500 employees is $120,000 — enough to close most small companies.</p>
+                <p>The good news: most attacks are preventable. The bad news: most small businesses skip the basics because they don&apos;t know where to start.</p>
+              </>
+            )}
           </div>
 
           {/* Mid affiliate CTA */}
