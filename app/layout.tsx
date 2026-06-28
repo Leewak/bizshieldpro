@@ -29,11 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header style={{ background: "rgba(13,16,32,0.95)", borderBottom: "1px solid #1D2340", backdropFilter: "blur(12px)", position: "sticky", top: 0, zIndex: 50 }}>
           <nav className="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
             <a href="/" className="flex items-center gap-2" style={{ fontFamily: "var(--font-space-grotesk)", fontWeight: 700, color: "#EEF2FF", fontSize: "1rem", letterSpacing: "-0.02em" }}>
-              <div className="shield-icon" style={{ width: 28, height: 28, borderRadius: 7 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-icon.png" alt="BizShield Pro" style={{ height: 36, width: 36, objectFit: "contain", borderRadius: 7 }} />
               BizShield<span style={{ color: "#3B82F6" }}>Pro</span>
             </a>
             <div className="hidden md:flex items-center gap-5">
