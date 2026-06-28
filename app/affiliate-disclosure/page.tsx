@@ -11,7 +11,7 @@ export default function AffiliatePage() {
         { h: "What This Means for You", body: "You pay the same price whether or not you use our affiliate link. The commission comes from the vendor's marketing budget, not from you." },
         { h: "Our Review Standards", body: "We only recommend cybersecurity tools and services we have researched thoroughly. Affiliate relationships do not influence our ratings, rankings, or editorial opinions. We would rather lose a commission than recommend an inferior product." },
         { h: "Advertising", body: "This site also displays ads via Google AdSense. These ads are served automatically and are not individual endorsements." },
-        { h: "Contact", body: "Questions about our affiliate relationships? Email guifrhi.khalid@gmail.com" },
+        { h: "Contact", body: "Questions about our affiliate relationships? Email hello@bizshieldpro.co" },
       ].map(({ h, body }) => (
         <div key={h} className="mb-8">
           <h2 className="text-base font-bold mb-2" style={{ color: "#CBD5E1" }}>{h}</h2>

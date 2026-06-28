@@ -10,7 +10,7 @@ const sections = [
   { h: "7. Your Rights", body: "Depending on your location, you may have rights to access, correct, delete, or restrict your data. EU/UK residents have rights under GDPR. California residents have rights under CCPA. Contact us to exercise your rights." },
   { h: "8. Children's Privacy", body: "Our site is not directed at children under 13. We do not knowingly collect information from children. Contact us immediately if you believe we have." },
   { h: "9. Changes", body: "We may update this policy periodically. Changes are posted on this page with a revised date." },
-  { h: "10. Contact", body: "Questions? Email us: guifrhi.khalid@gmail.com" },
+  { h: "10. Contact", body: "Questions? Email us: hello@bizshieldpro.co" },
 ];
 export default function PrivacyPage() {
   return (
