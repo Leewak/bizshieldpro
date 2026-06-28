@@ -137,6 +137,7 @@ export const posts: Post[] = [
     difficulty: "Beginner",
     author: "BizShield Editorial Team",
     wordCount: 2100,
+    heroImage: { src: "https://images.pexels.com/photos/8962441/pexels-photo-8962441.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Image of a checklist and calculator for managing small business accounting tasks efficiently.", caption: "Photo by Leeloo The First on Pexels" },
     quickAnswer: "The 15 most critical cybersecurity steps for small business in 2026 are: (1) enable MFA on all accounts, (2) use a password manager, (3) set up automated backups, (4) install endpoint protection, (5) train employees on phishing, (6) secure your Wi-Fi router, (7) enable email filtering, (8) keep software updated, (9) create an incident response plan, (10) use a business VPN for remote work, (11) segment your network, (12) review access permissions quarterly, (13) encrypt sensitive data, (14) set up DNS filtering, and (15) get cyber liability insurance.",
     faq: [
       { q: "What are the most important cybersecurity steps for small businesses?", a: "The most critical steps are: enabling multi-factor authentication (MFA) on all accounts, using a business password manager, setting up automated offsite backups, installing endpoint protection software, and training employees to recognize phishing emails. These five steps alone prevent over 80% of common attacks." },
@@ -163,6 +164,7 @@ export const posts: Post[] = [
     difficulty: "Beginner",
     author: "BizShield Editorial Team",
     wordCount: 2400,
+    heroImage: { src: "https://images.pexels.com/photos/2882630/pexels-photo-2882630.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Focus on password security with white keyboard tiles spelling 'PASSWORD' on a coral background.", caption: "Photo by Miguel \u00c1. Padri\u00f1\u00e1n on Pexels" },
     quickAnswer: "The best password manager for small business teams in 2026 is 1Password Teams at $4/user/month. It has the best UX, strongest admin controls, and a built-in Travel Mode. Bitwarden is the best free/budget option (free for individuals, $3/user/month for teams). Keeper is best for enterprises needing advanced compliance features. All three support MFA and secure sharing.",
     faq: [
       { q: "What is the best password manager for a small business team?", a: "1Password Teams is the best overall for small businesses in 2026. It offers excellent admin controls, easy onboarding, secure sharing vaults, and Travel Mode. At $4/user/month (billed annually), it's affordable for teams of 5–50 people. Bitwarden Teams is a strong budget alternative at $3/user/month with an open-source codebase." },
@@ -189,6 +191,7 @@ export const posts: Post[] = [
     difficulty: "Beginner",
     author: "BizShield Editorial Team",
     wordCount: 2600,
+    heroImage: { src: "https://images.pexels.com/photos/30885916/pexels-photo-30885916.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Wooden tiles spelling 'phishing' highlight cybersecurity themes.", caption: "Photo by Markus Winkler on Pexels" },
     quickAnswer: "To prevent phishing attacks on your business: (1) Enable DMARC, DKIM, and SPF on your email domain so attackers can't spoof your address. (2) Deploy an email filtering service like Proofpoint or Microsoft Defender. (3) Run quarterly phishing simulations to train employees. (4) Enable MFA on all accounts so stolen passwords alone can't grant access. (5) Use a DNSBL to block known malicious domains. These five steps stop 95% of phishing attempts.",
     faq: [
       { q: "What is the most effective way to prevent phishing?", a: "The most effective combination is: MFA on all accounts (stops credential theft even if passwords are stolen), email filtering (blocks 99% of phishing emails before delivery), and employee training with simulated phishing tests. No single measure is enough — layered defense is the proven approach." },
@@ -214,6 +217,7 @@ export const posts: Post[] = [
     difficulty: "Intermediate",
     author: "BizShield Editorial Team",
     wordCount: 2200,
+    heroImage: { src: "https://images.pexels.com/photos/5530195/pexels-photo-5530195.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Individual using a VPN application on a laptop at a desk in a modern office setting.", caption: "Photo by Dan  Nelson on Pexels" },
     quickAnswer: "The best business VPN for small teams (2–25 people) is NordLayer at $7/user/month. It has the best balance of security, speed, and ease of setup. For larger teams (25+) needing Zero Trust Network Access (ZTNA), Cloudflare Zero Trust is the best choice — and it's free for up to 50 users. Perimeter 81 is best for businesses that need site-to-site VPN connections between offices.",
     faq: [
       { q: "Do small businesses need a VPN?", a: "Yes, especially if employees work remotely or use public Wi-Fi. A business VPN encrypts all internet traffic, hides your IP address, and creates a secure tunnel to your company network. It also prevents competitors or attackers from intercepting sensitive business communications. With remote work now standard, a VPN is considered essential security infrastructure." },
@@ -239,6 +243,7 @@ export const posts: Post[] = [
     difficulty: "Intermediate",
     author: "BizShield Editorial Team",
     wordCount: 2800,
+    heroImage: { src: "https://images.pexels.com/photos/5912577/pexels-photo-5912577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Letter tiles spelling 'Support Small Businesses' on a blue background, promoting local entrepreneurship.", caption: "Photo by Tima Miroshnichenko on Pexels" },
     quickAnswer: "GDPR compliance for small businesses requires: (1) A clear, plain-language Privacy Policy explaining what data you collect and why. (2) A cookie consent banner with genuine opt-in (not pre-checked boxes). (3) A process to respond to data subject access requests (DSARs) within 30 days. (4) A Data Processing Agreement (DPA) with every vendor that handles your customer data (email tools, CRM, analytics). (5) A written record of your data processing activities. Most of this can be done in 1–2 days using free tools.",
     faq: [
       { q: "Does GDPR apply to small businesses?", a: "Yes, GDPR applies to any business — regardless of size — that collects or processes personal data from EU residents. Even if your business is based in the US, Canada, or Morocco, if you have EU customers or website visitors from the EU, GDPR applies. The good news: enforcement focuses on large-scale data misuse. Most small businesses face no fines if they make a genuine effort to comply." },
@@ -264,6 +269,7 @@ export const posts: Post[] = [
     difficulty: "Beginner",
     author: "BizShield Editorial Team",
     wordCount: 1800,
+    heroImage: { src: "https://images.pexels.com/photos/10330120/pexels-photo-10330120.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Woman using TAN generator for secure online payment on laptop, enhancing cybersecurity.", caption: "Photo by REINER  SCT on Pexels" },
     quickAnswer: "To set up 2FA for your business: (1) Choose an authenticator app — Google Authenticator (free) or Duo Security (for teams). (2) Enable 2FA in your email/cloud accounts first (Google Workspace, Microsoft 365). (3) Require 2FA for your accounting software, banking, and CRM. (4) Use an authenticator app rather than SMS for any sensitive account. (5) Store backup codes in your password manager. The whole process takes under 2 hours for a 10-person team.",
     faq: [
       { q: "What is the difference between 2FA and MFA?", a: "2FA (Two-Factor Authentication) requires exactly two forms of identity verification. MFA (Multi-Factor Authentication) requires two or more. In practice, most people use the terms interchangeably. Both add a second verification step beyond your password — typically a one-time code from an app, a hardware key, or biometrics. MFA is the broader term used in security policies." },
@@ -288,6 +294,7 @@ export const posts: Post[] = [
     coverColor: "#1E3A8A",
     author: "BizShield Pro Editorial",
     wordCount: 1824,
+    heroImage: { src: "https://images.pexels.com/photos/37755432/pexels-photo-37755432.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Close-up of a laptop screen displaying green code text. Perfect for cybersecurity themes.", caption: "Photo by Rafael Minguet Delgado on Pexels" },
     quickAnswer: "Endpoint security for SMBs is protection software installed on devices like laptops, desktops, and mobile phones that prevents malware, ransomware, and unauthorized access. Small businesses need endpoint security because their limited IT resources make them attractive targets for cybercriminals. Modern solutions combine antivirus, firewalls, and threat detection in one affordable platform.",
     faq: [
       { q: "How much does endpoint security for SMBs cost?", a: "Endpoint security costs for SMBs typically range from $30 to $150 per device per year, depending on the solution and features included. Some platforms offer per-seat licensing, while others use annual subscriptions. For a ten-person business, annual costs might range from $3,000 to $15,000. This is significantly less than the average cost of a data breach, which exceeds $200,000 for small businesses. Many providers offer free trials or demos so you can evaluate the solution before committing." },
@@ -320,6 +327,7 @@ export const posts: Post[] = [
     coverColor: "#0F4C3A",
     author: "BizShield Pro Editorial",
     wordCount: 1316,
+    heroImage: { src: "https://images.pexels.com/photos/30965500/pexels-photo-30965500.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Close-up of wooden Scrabble tiles spelling SECURITY, symbolizing cybersecurity and protection.", caption: "Photo by Markus Winkler on Pexels" },
     quickAnswer: "The best antivirus for business combines real-time threat detection, minimal performance impact, and affordable pricing. Solutions like Malwarebytes, NordLayer, and enterprise-grade options offer comprehensive protection specifically designed for small business needs, with centralized management dashboards and 24/7 support.",
     faq: [
       { q: "What is the difference between antivirus and anti-malware?", a: "Antivirus specifically targets viruses: malicious code that replicates by attaching to other programs. Anti-malware is broader and includes viruses, worms, trojans, ransomware, spyware, and other malicious software. Modern business security uses both terms interchangeably since comprehensive solutions protect against all malware types, not just viruses." },
