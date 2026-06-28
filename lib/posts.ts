@@ -243,7 +243,7 @@ export const posts: Post[] = [
     difficulty: "Intermediate",
     author: "BizShield Editorial Team",
     wordCount: 2800,
-    heroImage: { src: "https://images.pexels.com/photos/5912577/pexels-photo-5912577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Letter tiles spelling 'Support Small Businesses' on a blue background, promoting local entrepreneurship.", caption: "Photo by Tima Miroshnichenko on Pexels" },
+    heroImage: { src: "https://images.pexels.com/photos/19825346/pexels-photo-19825346.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Wooden letter tiles forming the word 'COMPLIANCE' on a rustic wooden background.", caption: "Photo by Markus Winkler on Pexels" },
     quickAnswer: "GDPR compliance for small businesses requires: (1) A clear, plain-language Privacy Policy explaining what data you collect and why. (2) A cookie consent banner with genuine opt-in (not pre-checked boxes). (3) A process to respond to data subject access requests (DSARs) within 30 days. (4) A Data Processing Agreement (DPA) with every vendor that handles your customer data (email tools, CRM, analytics). (5) A written record of your data processing activities. Most of this can be done in 1–2 days using free tools.",
     faq: [
       { q: "Does GDPR apply to small businesses?", a: "Yes, GDPR applies to any business — regardless of size — that collects or processes personal data from EU residents. Even if your business is based in the US, Canada, or Morocco, if you have EU customers or website visitors from the EU, GDPR applies. The good news: enforcement focuses on large-scale data misuse. Most small businesses face no fines if they make a genuine effort to comply." },
@@ -294,7 +294,7 @@ export const posts: Post[] = [
     coverColor: "#1E3A8A",
     author: "BizShield Pro Editorial",
     wordCount: 1824,
-    heroImage: { src: "https://images.pexels.com/photos/37755432/pexels-photo-37755432.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Close-up of a laptop screen displaying green code text. Perfect for cybersecurity themes.", caption: "Photo by Rafael Minguet Delgado on Pexels" },
+    heroImage: { src: "https://images.pexels.com/photos/4973899/pexels-photo-4973899.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Laptop displaying a security lock icon on a table with a potted plant and clock.", caption: "Photo by Dan  Nelson on Pexels" },
     quickAnswer: "Endpoint security for SMBs is protection software installed on devices like laptops, desktops, and mobile phones that prevents malware, ransomware, and unauthorized access. Small businesses need endpoint security because their limited IT resources make them attractive targets for cybercriminals. Modern solutions combine antivirus, firewalls, and threat detection in one affordable platform.",
     faq: [
       { q: "How much does endpoint security for SMBs cost?", a: "Endpoint security costs for SMBs typically range from $30 to $150 per device per year, depending on the solution and features included. Some platforms offer per-seat licensing, while others use annual subscriptions. For a ten-person business, annual costs might range from $3,000 to $15,000. This is significantly less than the average cost of a data breach, which exceeds $200,000 for small businesses. Many providers offer free trials or demos so you can evaluate the solution before committing." },
@@ -327,7 +327,7 @@ export const posts: Post[] = [
     coverColor: "#0F4C3A",
     author: "BizShield Pro Editorial",
     wordCount: 1316,
-    heroImage: { src: "https://images.pexels.com/photos/30965500/pexels-photo-30965500.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Close-up of wooden Scrabble tiles spelling SECURITY, symbolizing cybersecurity and protection.", caption: "Photo by Markus Winkler on Pexels" },
+    heroImage: { src: "https://images.pexels.com/photos/5483248/pexels-photo-5483248.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Close-up of a laptop displaying cybersecurity text, emphasizing digital security themes.", caption: "Photo by cottonbro studio on Pexels" },
     quickAnswer: "The best antivirus for business combines real-time threat detection, minimal performance impact, and affordable pricing. Solutions like Malwarebytes, NordLayer, and enterprise-grade options offer comprehensive protection specifically designed for small business needs, with centralized management dashboards and 24/7 support.",
     faq: [
       { q: "What is the difference between antivirus and anti-malware?", a: "Antivirus specifically targets viruses: malicious code that replicates by attaching to other programs. Anti-malware is broader and includes viruses, worms, trojans, ransomware, spyware, and other malicious software. Modern business security uses both terms interchangeably since comprehensive solutions protect against all malware types, not just viruses." },
