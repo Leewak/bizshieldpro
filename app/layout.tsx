@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
@@ -21,6 +22,9 @@ const navLinks = [
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9394532963824272" crossOrigin="anonymous" strategy="afterInteractive" />
+      </head>
       <body className="min-h-screen flex flex-col antialiased" style={{ background: "#0A0C14", color: "#EEF2FF" }}>
         <header style={{ background: "rgba(13,16,32,0.95)", borderBottom: "1px solid #1D2340", backdropFilter: "blur(12px)", position: "sticky", top: 0, zIndex: 50 }}>
           <nav className="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
