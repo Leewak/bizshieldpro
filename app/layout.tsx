@@ -23,22 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
+        {/* GA4 — plain <script> tags so they appear in raw HTML for Google's tag detector */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QS5CNX8F7" />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6QS5CNX8F7');` }} />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9394532963824272" crossOrigin="anonymous" strategy="afterInteractive" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6QS5CNX8F7" strategy="afterInteractive" />
-        <Script
-          id="ga4-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6QS5CNX8F7');`,
-          }}
-        />
-        <Script
-          id="clarity-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xf0yrcuihu");`,
-          }}
-        />
+        <Script id="clarity-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xf0yrcuihu");` }} />
       </head>
       <body className="min-h-screen flex flex-col antialiased" style={{ background: "#0A0C14", color: "#EEF2FF" }}>
         <header style={{ background: "rgba(13,16,32,0.95)", borderBottom: "1px solid #1D2340", backdropFilter: "blur(12px)", position: "sticky", top: 0, zIndex: 50 }}>
