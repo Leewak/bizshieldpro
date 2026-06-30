@@ -1,5 +1,6 @@
 export interface FAQ { q: string; a: string; }
 export interface AffiliateProduct { name: string; url: string; cta: string; badge?: string; }
+export interface Section { h2: string; paras: string[]; list?: string[]; }
 
 export interface Post {
   slug: string;
@@ -9,6 +10,7 @@ export interface Post {
   tags: string[];
   date: string;
   readTime: number;
+  coverColor?: string;
   featured?: boolean;
   difficulty?: "Beginner" | "Intermediate" | "Advanced";
   quickAnswer?: string;
@@ -16,6 +18,7 @@ export interface Post {
   affiliates?: AffiliateProduct[];
   author?: string;
   wordCount?: number;
+  sections?: Section[];
 }
 
 export const categories = [
@@ -26,7 +29,7 @@ export const categories = [
   { slug: "password-security", label: "Passwords", color: "#8B5CF6" },
 ];
 
-export const posts: Post[
+export const posts = [
   {
     slug: "best-vpn-for-small-business",
     title: "Best VPN for Small Business: Secure Remote Work & Data Protection",
@@ -125,7 +128,6 @@ export const posts: Post[
       { h2: "Create a Data Backup and Disaster Recovery Plan", paras: ["Phishing attacks often lead to ransomware infections\u2014malicious software that encrypts your files and demands payment for recovery. The best defense against ransomware is having reliable backups stored separately from your main systems. If ransomware encrypts your files, you can restore from backup and avoid paying attackers.", "Implement the 3-2-1 backup rule: keep three copies of critical data, on two different types of media, with one copy stored off-site. Regular automated backups are essential\u2014daily or even continuous backups for critical systems. Test your backup recovery process quarterly to ensure you can actually restore data in an emergency. A backup that can't be restored when needed provides no protection.", "Combine backups with a comprehensive disaster recovery plan that includes phishing and ransomware scenarios. Who initiates the response? What systems get priority? How long can you operate without certain services? Small businesses often skip this planning, but it's the difference between a contained incident and a catastrophic outage."] },
     ],
   },
-] = [
   {
     slug: "cybersecurity-checklist-small-business",
     title: "Cybersecurity Checklist for Small Business 2026: 15 Steps to Protect Your Company",
