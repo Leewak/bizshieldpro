@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
+        <meta name="msvalidate.01" content="AC3C7BA78C150E1E02F0128192AEFA8A" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9394532963824272" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen flex flex-col antialiased" style={{ background: "#0A0C14", color: "#EEF2FF" }}>
