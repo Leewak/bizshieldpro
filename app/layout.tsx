@@ -29,8 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen flex flex-col antialiased" style={{ background: "#0A0C14", color: "#EEF2FF" }}>
         <header style={{ background: "rgba(13,16,32,0.95)", borderBottom: "1px solid #1D2340", backdropFilter: "blur(12px)", position: "sticky", top: 0, zIndex: 50 }}>
           <nav className="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-            <a href="/" style={{ fontFamily: "var(--font-space-grotesk)", fontWeight: 700, color: "#EEF2FF", fontSize: "1rem", letterSpacing: "-0.02em" }}>
-              BizShield<span style={{ color: "#3B82F6" }}>Pro</span>
+            <a href="/">
+              <img src="/logo-bsp.png" alt="BizShield Pro" style={{ height: "28px", width: "auto" }} />
             </a>
             <div className="hidden md:flex items-center gap-5">
               {navLinks.map(({ label, href }) => (
@@ -51,9 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ))}
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="font-bold" style={{ fontFamily: "var(--font-space-grotesk)", color: "#EEF2FF" }}>
-                BizShield<span style={{ color: "#3B82F6" }}>Pro</span>
-              </span>
+              <img src="/logo-bsp.png" alt="BizShield Pro" style={{ height: "22px", width: "auto" }} />
               <p className="text-xs" style={{ color: "#1D2340" }}>
                 &copy; {new Date().getFullYear()} BizShieldPro. Some links may be affiliate links.
               </p>
