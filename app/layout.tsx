@@ -18,6 +18,7 @@ const navLinks = [
   { label: "Tools", href: "/category/tools" },
   { label: "Compliance", href: "/category/compliance" },
   { label: "Checklists", href: "/category/checklists" },
+  { label: "Free Tools", href: "/tools" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
