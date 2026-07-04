@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Terms of Use | BizShieldPro", description: "Terms and conditions for using BizShieldPro." };
+export const metadata: Metadata = { title: "Terms of Use", description: "Terms and conditions for using BizShieldPro.", alternates: { canonical: "/terms" } };
 export default function TermsPage() {
   return (
     <div className="max-w-3xl mx-auto px-5 sm:px-8 py-20">

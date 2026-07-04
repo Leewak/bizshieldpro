@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "BizShield Pro — Cybersecurity Made Simple for Small Business",
   description: "Practical cybersecurity guides for small business owners. Protect your business without needing an IT team.",
+  alternates: { canonical: "/" },
 };
 
 export default function HomePage() {

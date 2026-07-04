@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | ${SITE_NAME}`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.tags.join(", "),
     authors: [{ name: post.author ?? AUTHOR }],

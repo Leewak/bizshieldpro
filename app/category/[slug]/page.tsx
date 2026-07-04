@@ -8,7 +8,7 @@ export async function generateStaticParams() { return categories.map((c) => ({ s
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const cat = categories.find((c) => c.slug === slug);
-  return cat ? { title: `${cat.label} — BizShield Pro` } : {};
+  return cat ? { title: cat.label, alternates: { canonical: `/category/${slug}` } } : {};
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {

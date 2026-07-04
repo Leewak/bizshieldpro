@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Free Cybersecurity Tools for Small Business | BizShield Pro",
+  title: "Free Cybersecurity Tools for Small Business",
   description: "Free browser-based security tools for small businesses. Check password strength and analyze emails for phishing red flags — 100% client-side, nothing is ever transmitted.",
   alternates: { canonical: "https://bizshieldpro.co/tools" },
 };

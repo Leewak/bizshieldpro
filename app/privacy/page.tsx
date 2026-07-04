@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Privacy Policy | BizShieldPro", description: "How BizShieldPro collects, uses, and protects your personal information." };
+export const metadata: Metadata = { title: "Privacy Policy", description: "How BizShieldPro collects, uses, and protects your personal information.", alternates: { canonical: "/privacy" } };
 const sections = [
   { h: "1. Information We Collect", body: "We collect information you provide (email for newsletter) and information collected automatically: IP address, browser type, pages viewed, time on site, and referral source. This is collected via Google Analytics and standard server logs." },
   { h: "2. How We Use Your Information", body: "We use collected data to operate and improve the website, send newsletters to subscribers, analyze traffic, and comply with legal obligations. We do not sell your personal information." },
