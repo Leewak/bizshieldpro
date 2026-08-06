@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Free Cybersecurity Tools for Small Business",
-  description: "Free browser-based security tools for small businesses. Check password strength and analyze emails for phishing red flags — 100% client-side, nothing is ever transmitted.",
+  description: "Free browser-based security tools for small businesses. Check passwords, scan for breaches, verify email authentication, assess risk, and more — 100% client-side, nothing is ever transmitted.",
   alternates: { canonical: "https://bizshieldpro.co/tools" },
 };
 
@@ -16,10 +16,59 @@ const tools = [
     color: "#8B5CF6",
   },
   {
+    href: "/tools/password-generator",
+    title: "Password Generator",
+    description: "Generate strong, truly random passwords with the Web Crypto API. Choose length and character types — nothing is ever transmitted.",
+    icon: "🎲",
+    color: "#3B82F6",
+  },
+  {
+    href: "/tools/leaked-password-checker",
+    title: "Leaked Password Checker",
+    description: "Check if a password has appeared in a known data breach using HaveIBeenPwned's k-anonymity API. Only a partial hash is ever sent.",
+    icon: "🕵️",
+    color: "#F97316",
+  },
+  {
     href: "/tools/phishing-email-analyzer",
     title: "Phishing Email Analyzer",
     description: "Paste any suspicious email and get an instant red-flag score. Checks for urgency language, credential requests, suspicious links, and 40+ phishing patterns.",
     icon: "🎣",
+    color: "#EF4444",
+  },
+  {
+    href: "/tools/phishing-url-checker",
+    title: "Phishing URL Checker",
+    description: "Paste any link before you click it. Scans for IP-literal hosts, punycode lookalikes, brand impersonation, and link shorteners.",
+    icon: "🔗",
+    color: "#EAB308",
+  },
+  {
+    href: "/tools/dmarc-spf-checker",
+    title: "SPF, DKIM & DMARC Checker",
+    description: "Check any domain's email authentication setup instantly. Missing records let attackers spoof your domain and hurt deliverability.",
+    icon: "📧",
+    color: "#10B981",
+  },
+  {
+    href: "/tools/security-headers-checker",
+    title: "Security Headers Checker",
+    description: "Check any website's HTTP security headers — HSTS, CSP, X-Frame-Options — and get a letter grade with fixes for what's missing.",
+    icon: "🛡️",
+    color: "#3B82F6",
+  },
+  {
+    href: "/tools/cybersecurity-risk-assessment",
+    title: "Cybersecurity Risk Self-Assessment",
+    description: "15-question scored quiz covering passwords, backups, phishing readiness, and access control. Get an instant risk score and action list.",
+    icon: "📋",
+    color: "#8B5CF6",
+  },
+  {
+    href: "/tools/data-breach-cost-calculator",
+    title: "Data Breach Cost Calculator",
+    description: "Estimate what a breach could cost your business based on records exposed, industry, and detection time.",
+    icon: "💰",
     color: "#EF4444",
   },
 ];
