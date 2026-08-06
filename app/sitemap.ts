@@ -20,6 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/tools`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${BASE}/tools/password-strength-checker`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${BASE}/tools/phishing-email-analyzer`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/password-generator`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/leaked-password-checker`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/phishing-url-checker`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/dmarc-spf-checker`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/security-headers-checker`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/cybersecurity-risk-assessment`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE}/tools/data-breach-cost-calculator`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
   ];
   return [
     { url: BASE, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
