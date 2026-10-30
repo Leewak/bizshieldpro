@@ -149,16 +149,12 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             {post.sections?.map((section, i) => (
               <div key={i}>
                 <h2 style={{ fontFamily: "var(--font-space-grotesk)", color: "#EEF2FF" }}>{section.h2}</h2>
-                {i % 2 !== 0 && (
-                  <div className="my-5 rounded-xl overflow-hidden" style={{ border: "1px solid #1D2340" }}>
+                {section.image && (
+                  <figure className="my-5 rounded-xl overflow-hidden" style={{ border: "1px solid #1D2340" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={section.image?.src ?? `https://picsum.photos/seed/${post.slug}-${i}/900/360`}
-                      alt={section.image?.alt ?? section.h2}
-                      className="w-full object-cover"
-                      style={{ maxHeight: 360 }}
-                    />
-                  </div>
+                    <img src={section.image.src} alt={section.image.alt} loading="lazy" className="w-full object-cover" style={{ maxHeight: 360 }} />
+                    {section.image.caption && <figcaption className="text-xs text-center py-2 px-4" style={{ color: "#5A6490", background: "#0D1020" }}>{section.image.caption}</figcaption>}
+                  </figure>
                 )}
                 {section.paras.map((para, j) => <p key={j}>{para}</p>)}
                 {section.list && (

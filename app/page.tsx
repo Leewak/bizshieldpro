@@ -67,6 +67,10 @@ export default function HomePage() {
             {featured.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block rounded-xl p-6 transition-all duration-200 hover:border-blue-500/40"
                 style={{ border: "1px solid #1D2340", background: "#111525" }}>
+                {post.heroImage && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={post.heroImage.src} alt={post.heroImage.alt} loading="lazy" className="-mx-6 -mt-6 mb-5 w-[calc(100%+3rem)] max-w-none aspect-[16/9] object-cover rounded-t-xl" />
+                )}
                 <div className="flex items-center gap-2 mb-4">
                   <span className="tag-pill">{getCategoryLabel(post.category)}</span>
                   {post.difficulty && (
@@ -95,6 +99,10 @@ export default function HomePage() {
             {latest.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="flex items-start gap-4 p-4 rounded-xl group transition-all duration-200 hover:border-bz-blue/30"
                 style={{ border: "1px solid #1D2340", background: "#0D1020" }}>
+                {post.heroImage && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={post.heroImage.src} alt={post.heroImage.alt} loading="lazy" className="w-20 h-16 sm:w-28 sm:h-20 shrink-0 rounded-lg object-cover" style={{ border: "1px solid #1D2340" }} />
+                )}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="tag-pill" style={{ borderColor: `${getCategoryColor(post.category)}40`, background: `${getCategoryColor(post.category)}10`, color: getCategoryColor(post.category) }}>

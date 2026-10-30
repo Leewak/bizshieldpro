@@ -27,6 +27,10 @@ export default function BlogPage() {
             <Link key={post.slug} href={`/blog/${post.slug}`}
               className="flex items-start gap-4 p-4 rounded-xl group"
               style={{ border: "1px solid #1D2340", background: "#0D1020" }}>
+              {post.heroImage && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={post.heroImage.src} alt={post.heroImage.alt} loading="lazy" className="w-20 h-16 sm:w-28 sm:h-20 shrink-0 rounded-lg object-cover" style={{ border: "1px solid #1D2340" }} />
+              )}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="tag-pill" style={{ borderColor: `${getCategoryColor(post.category)}40`, background: `${getCategoryColor(post.category)}10`, color: getCategoryColor(post.category) }}>

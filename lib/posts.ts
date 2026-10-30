@@ -1,6 +1,7 @@
+import { postImages } from './postImages';
 export interface FAQ { q: string; a: string; }
 export interface AffiliateProduct { name: string; url: string; cta: string; badge?: string; }
-export interface Section { h2: string; paras: string[]; list?: string[]; }
+export interface Section { h2: string; paras: string[]; list?: string[]; image?: { src: string; alt: string; caption?: string; }; }
 
 export interface Post {
   slug: string;
@@ -19,6 +20,7 @@ export interface Post {
   author?: string;
   wordCount?: number;
   sections?: Section[];
+  heroImage?: { src: string; alt: string; caption?: string; };
 }
 
 export const categories = [
@@ -29,7 +31,7 @@ export const categories = [
   { slug: "password-security", label: "Passwords", color: "#8B5CF6" },
 ];
 
-export const posts = [
+export const posts: Post[] = [
   {
     slug: "cybersecurity-checklist-small-business",
     title: "Cybersecurity Checklist for Small Business 2026: 15 Steps to Protect Your Company",
@@ -335,6 +337,14 @@ export const posts = [
     ],
   },
 ];
+
+// Extra photos (Pexels) picked by blog-farm/scripts/section_images.py: cover (fills a missing one or replaces a duplicate) + in-article images.
+for (const p of posts) {
+  const extra = postImages[p.slug];
+  if (!extra) continue;
+  if (extra.hero) p.heroImage = extra.hero;
+  p.sections?.forEach((s, i) => { if (extra.sections?.[i] && !s.image) s.image = extra.sections[i]; });
+}
 
 export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
 export const getPostsByCategory = (cat: string) => posts.filter((p) => p.category === cat);
