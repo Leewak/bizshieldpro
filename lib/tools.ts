@@ -1,0 +1,38 @@
+// Registry of the free browser-based tools. Drives /tools, the "tools" category page, sitemap and per-tool metadata.
+export type ToolFaq = { q: string; a: string };
+export type Tool = { slug: string; title: string; short: string; description: string; icon: string; color: string; group: "Passwords" | "Email & DNS" | "Web & Developers" | "Encoding & Crypto" | "Business"; isNew?: boolean };
+
+export const TOOLS: Tool[] = [
+  { slug: "password-strength-checker", title: "Password Strength Checker", short: "Score any password", description: "Instantly score any password using entropy calculation, pattern detection, and a common-password database. Your password never leaves your browser.", icon: "🔐", color: "#8B5CF6", group: "Passwords" },
+  { slug: "password-generator", title: "Password Generator", short: "Strong random passwords", description: "Generate strong, truly random passwords with the Web Crypto API. Choose length and character types — nothing is ever transmitted.", icon: "🎲", color: "#3B82F6", group: "Passwords" },
+  { slug: "passphrase-generator", title: "Passphrase Generator", short: "Memorable word passwords", description: "Create long, memorable passphrases from random words, with optional numbers and separators. Generated locally with the Web Crypto API.", icon: "🧩", color: "#10B981", group: "Passwords", isNew: true },
+  { slug: "pin-generator", title: "Random PIN Generator", short: "Secure 4–12 digit PINs", description: "Generate random PIN codes that avoid easy-to-guess patterns like 1234, repeated digits and birth years.", icon: "🔢", color: "#F97316", group: "Passwords", isNew: true },
+  { slug: "leaked-password-checker", title: "Leaked Password Checker", short: "Was it in a breach?", description: "Check if a password has appeared in a known data breach using HaveIBeenPwned's k-anonymity API. Only a partial hash is ever sent.", icon: "🕵️", color: "#F97316", group: "Passwords" },
+  { slug: "phishing-email-analyzer", title: "Phishing Email Analyzer", short: "Red-flag score for emails", description: "Paste any suspicious email and get an instant red-flag score. Checks for urgency language, credential requests, suspicious links, and 40+ phishing patterns.", icon: "🎣", color: "#EF4444", group: "Email & DNS" },
+  { slug: "email-header-analyzer", title: "Email Header Analyzer", short: "Trace & check SPF/DKIM/DMARC", description: "Paste raw email headers to see the delivery path, SPF, DKIM and DMARC results, and mismatched sender addresses — parsed in your browser.", icon: "📨", color: "#06B6D4", group: "Email & DNS", isNew: true },
+  { slug: "dmarc-spf-checker", title: "SPF, DKIM & DMARC Checker", short: "Email authentication check", description: "Check any domain's email authentication setup instantly. Missing records let attackers spoof your domain and hurt deliverability.", icon: "📧", color: "#10B981", group: "Email & DNS" },
+  { slug: "dns-lookup", title: "DNS Lookup", short: "A, MX, TXT, NS, CAA records", description: "Look up A, AAAA, MX, TXT, NS, CNAME and CAA records for any domain using encrypted DNS-over-HTTPS.", icon: "🌐", color: "#3B82F6", group: "Email & DNS", isNew: true },
+  { slug: "phishing-url-checker", title: "Phishing URL Checker", short: "Check a link before clicking", description: "Paste any link before you click it. Scans for IP-literal hosts, punycode lookalikes, brand impersonation, and link shorteners.", icon: "🔗", color: "#EAB308", group: "Web & Developers" },
+  { slug: "security-headers-checker", title: "Security Headers Checker", short: "Grade a site's HTTP headers", description: "Check any website's HTTP security headers — HSTS, CSP, X-Frame-Options — and get a letter grade with fixes for what's missing.", icon: "🛡️", color: "#3B82F6", group: "Web & Developers" },
+  { slug: "csp-header-generator", title: "CSP Header Generator", short: "Build a Content-Security-Policy", description: "Build a Content-Security-Policy header step by step, with safe defaults and copy-ready output for Nginx, Apache and HTML meta tags.", icon: "🧱", color: "#8B5CF6", group: "Web & Developers", isNew: true },
+  { slug: "security-txt-generator", title: "security.txt Generator", short: "RFC 9116 contact file", description: "Create a valid security.txt file (RFC 9116) so researchers know how to report vulnerabilities to your business.", icon: "📄", color: "#10B981", group: "Web & Developers", isNew: true },
+  { slug: "what-is-my-ip", title: "What Is My IP Address?", short: "Your public IP & browser info", description: "See the public IPv4/IPv6 address websites see, plus what your browser reveals: language, time zone, screen and Do Not Track.", icon: "📍", color: "#EF4444", group: "Web & Developers", isNew: true },
+  { slug: "jwt-decoder", title: "JWT Decoder", short: "Inspect JSON Web Tokens", description: "Decode a JSON Web Token's header and payload, check expiry and spot risky settings like alg:none — locally, without sending the token anywhere.", icon: "🎫", color: "#F97316", group: "Encoding & Crypto", isNew: true },
+  { slug: "hash-generator", title: "Hash Generator", short: "SHA-256, SHA-1, SHA-512", description: "Generate SHA-1, SHA-256, SHA-384 and SHA-512 hashes of text or files and compare checksums — all in your browser.", icon: "#️⃣", color: "#3B82F6", group: "Encoding & Crypto", isNew: true },
+  { slug: "base64-encoder-decoder", title: "Base64 Encoder / Decoder", short: "Encode & decode Base64", description: "Encode text to Base64 or decode Base64 back to text, with UTF-8 and URL-safe support. Useful for inspecting suspicious email attachments and links.", icon: "🔤", color: "#06B6D4", group: "Encoding & Crypto", isNew: true },
+  { slug: "text-encryption-tool", title: "Text Encryption Tool", short: "AES-256 encrypt a message", description: "Encrypt and decrypt text with a password using AES-256-GCM in your browser, for sharing a secret over an untrusted channel.", icon: "🔏", color: "#10B981", group: "Encoding & Crypto", isNew: true },
+  { slug: "cybersecurity-risk-assessment", title: "Cybersecurity Risk Self-Assessment", short: "15-question risk score", description: "15-question scored quiz covering passwords, backups, phishing readiness, and access control. Get an instant risk score and action list.", icon: "📋", color: "#8B5CF6", group: "Business" },
+  { slug: "data-breach-cost-calculator", title: "Data Breach Cost Calculator", short: "Estimate breach cost", description: "Estimate what a breach could cost your business based on records exposed, industry, and detection time.", icon: "💰", color: "#EF4444", group: "Business" },
+  { slug: "password-policy-generator", title: "Password Policy Generator", short: "Ready-to-use staff policy", description: "Generate a clear password and MFA policy for your team, based on current NIST guidance, ready to paste into your handbook.", icon: "📝", color: "#EAB308", group: "Business", isNew: true },
+];
+
+export const GROUPS = ["Passwords", "Email & DNS", "Web & Developers", "Encoding & Crypto", "Business"] as const;
+export const getTool = (slug: string) => TOOLS.find((t) => t.slug === slug)!;
+export const relatedTools = (slug: string, n = 4) => {
+  const t = getTool(slug);
+  return [...TOOLS.filter((x) => x.slug !== slug && x.group === t.group), ...TOOLS.filter((x) => x.slug !== slug && x.group !== t.group)].slice(0, n);
+};
+export function toolMetadata(slug: string) {
+  const t = getTool(slug);
+  return { title: t.title, description: t.description, alternates: { canonical: `https://bizshieldpro.co/tools/${slug}` }, openGraph: { title: t.title, description: t.description, url: `https://bizshieldpro.co/tools/${slug}` } };
+}

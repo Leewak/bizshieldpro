@@ -12,7 +12,7 @@ const cspHeader = `
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https:;
   font-src 'self' data:;
-  connect-src 'self' https://bauval.org https://abscloud.org https://araplhn.org https://cdn.show-sb.com https://cdn.show-creative1.com https://cdn.cloudpiko.com https://*.clarity.ms https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google https://cloudflare-dns.com https://api.pwnedpasswords.com;
+  connect-src 'self' https://bauval.org https://abscloud.org https://araplhn.org https://cdn.show-sb.com https://cdn.show-creative1.com https://cdn.cloudpiko.com https://*.clarity.ms https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google https://cloudflare-dns.com https://api.pwnedpasswords.com https://api.ipify.org https://api64.ipify.org;
   frame-src 'self' https://bauval.org https://abscloud.org https://araplhn.org https://cdn.show-sb.com https://cdn.show-creative1.com https://cdn.cloudpiko.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com https://*.adtrafficquality.google;
   object-src 'none';
   base-uri 'self';

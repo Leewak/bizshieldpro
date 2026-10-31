@@ -3,6 +3,7 @@ import Link from "next/link";
 import { categories, getPostsByCategory, formatDate, getCategoryLabel, getCategoryColor } from "@/lib/posts";
 import type { Metadata } from "next";
 import { AdsterraInline, AdsterraNative } from "@/components/Adsterra";
+import { TOOLS } from "@/lib/tools";
 
 export async function generateStaticParams() { return categories.map((c) => ({ slug: c.slug })); }
 
@@ -25,6 +26,20 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <span className="tag-pill mb-3 inline-flex" style={{ borderColor: `${cat.color}40`, background: `${cat.color}10`, color: cat.color }}>{cat.label}</span>
         <h1 className="text-3xl font-bold mt-2 mb-1" style={{ fontFamily: "var(--font-space-grotesk)", color: "#EEF2FF" }}>{cat.label}</h1>
         <p className="text-sm mb-10" style={{ color: "#2A3060" }}>{catPosts.length} guides</p>
+        {slug === "tools" && (
+          <section className="mb-10">
+            <h2 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-space-grotesk)", color: "#EEF2FF" }}>{TOOLS.length} free security tools</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {TOOLS.map((t) => (
+                <Link key={t.slug} href={`/tools/${t.slug}`} className="p-4 rounded-xl transition-all hover:scale-[1.01]" style={{ background: "#0D1020", border: "1px solid #1D2340" }}>
+                  <span className="text-xl mr-2" aria-hidden>{t.icon}</span><strong style={{ color: "#EEF2FF" }}>{t.title}</strong>
+                  <span className="block text-xs mt-1" style={{ color: "#5B6899" }}>{t.short}</span>
+                </Link>
+              ))}
+            </div>
+            <h2 className="text-xl font-bold mt-10" style={{ fontFamily: "var(--font-space-grotesk)", color: "#EEF2FF" }}>Tool guides and reviews</h2>
+          </section>
+        )}
         <AdsterraInline className="mb-8" />
         <div className="space-y-3">
           {catPosts.map((post) => (
