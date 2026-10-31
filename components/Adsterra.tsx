@@ -89,3 +89,56 @@ export function AdsterraSideRails() {
   );
   return <>{rail("left")}{rail("right")}</>;
 }
+
+// Popunder and Social Bar script URLs from the Adsterra dashboard (GET CODE). Empty = not loaded.
+const POPUNDER_SRC = "https://abscloud.org/1/76fa92cb771bd23d5db81430540b6f9d";
+const SOCIAL_BAR_SRC = "https://bauval.org/14/d68a939b4b936411ae0c1db767c70620";
+const POP_KEY = "adsterra-pop-day";
+
+function loadScript(src: string) {
+  const s = document.createElement("script");
+  s.src = src;
+  s.async = true;
+  document.body.appendChild(s);
+  return s;
+}
+
+/** Popunder, capped to one page load per visitor per day (the script itself decides when it opens). */
+export function AdsterraPopunder() {
+  useEffect(() => {
+    if (!POPUNDER_SRC) return;
+    const today = new Date().toISOString().slice(0, 10);
+    try {
+      if (localStorage.getItem(POP_KEY) === today) return;
+      localStorage.setItem(POP_KEY, today);
+    } catch {
+      return; // no storage = can't cap, so skip
+    }
+    const s = loadScript(POPUNDER_SRC);
+    return () => s.remove();
+  }, []);
+  return null;
+}
+
+export function AdsterraSocialBar() {
+  useEffect(() => {
+    if (!SOCIAL_BAR_SRC) return;
+    const s = loadScript(SOCIAL_BAR_SRC);
+    return () => s.remove();
+  }, []);
+  return null;
+}
+
+const SMARTLINK = "https://araplhn.org/4/1b34c43d4e042d995321921341261451";
+
+/** Adsterra Smartlink as a clearly labelled sponsored button (never disguised as an article link). */
+export function AdsterraSponsoredLink({ className }: { className?: string }) {
+  return (
+    <div className={className} style={{ textAlign: "center" }}>
+      <AdLabel />
+      <a href={SMARTLINK} target="_blank" rel="sponsored nofollow noopener" style={{ display: "inline-block", padding: "12px 22px", borderRadius: 8, border: "1px solid currentColor", fontWeight: 600, fontSize: 15, opacity: 0.85 }}>
+        Sponsored: today&apos;s featured offer →
+      </a>
+    </div>
+  );
+}

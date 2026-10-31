@@ -8,12 +8,12 @@ import type { NextConfig } from "next";
 // Adsterra ad domain (blog-farm account); if Adsterra moves domains, update here.
 const cspHeader = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://bauval.org https://www.clarity.ms https://scripts.clarity.ms https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://adservice.google.com https://www.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com;
+  script-src 'self' 'unsafe-inline' https://bauval.org https://abscloud.org https://www.clarity.ms https://scripts.clarity.ms https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://adservice.google.com https://www.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https:;
   font-src 'self' data:;
-  connect-src 'self' https://bauval.org https://*.clarity.ms https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google https://cloudflare-dns.com https://api.pwnedpasswords.com;
-  frame-src 'self' https://bauval.org https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com https://*.adtrafficquality.google;
+  connect-src 'self' https://bauval.org https://abscloud.org https://*.clarity.ms https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google https://cloudflare-dns.com https://api.pwnedpasswords.com;
+  frame-src 'self' https://bauval.org https://abscloud.org https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://fundingchoicesmessages.google.com https://*.adtrafficquality.google;
   object-src 'none';
   base-uri 'self';
   form-action 'self';

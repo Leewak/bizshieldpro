@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { AdsterraInline, AdsterraNative } from "@/components/Adsterra";
+import { AdsterraInline, AdsterraNative, AdsterraSponsoredLink } from "@/components/Adsterra";
 import { getPost, posts, formatDate, getCategoryLabel, getCategoryColor } from "@/lib/posts";
 import type { Metadata } from "next";
 
@@ -225,6 +225,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             </div>
           )}
+
+          <AdsterraSponsoredLink className="mt-10" />
 
           <AdsterraNative className="mt-12" />
 
