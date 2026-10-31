@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { AdsterraInline, AdsterraNative } from "@/components/Adsterra";
 import { getPost, posts, formatDate, getCategoryLabel, getCategoryColor } from "@/lib/posts";
 import type { Metadata } from "next";
 
@@ -162,6 +163,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                     {section.list.map((item, k) => <li key={k}>{item}</li>)}
                   </ul>
                 )}
+                {i === 1 && post.sections!.length > 2 && <AdsterraInline className="my-10" />}
               </div>
             ))}
             {!post.sections && (
@@ -222,6 +224,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             </div>
           )}
+
+          <AdsterraNative className="mt-12" />
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mt-10 pt-8" style={{ borderTop: "1px solid #1D2340" }}>
