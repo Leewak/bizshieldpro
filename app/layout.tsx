@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+import { AdsterraSideRails } from "@/components/Adsterra";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"] });
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
         <main className="flex-1">{children}</main>
+        <AdsterraSideRails />
         <footer style={{ background: "#0D1020", borderTop: "1px solid #1D2340" }}>
           <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10">
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center mb-6">

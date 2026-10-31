@@ -67,3 +67,25 @@ export function AdsterraNative({ className }: { className?: string }) {
     </div>
   );
 }
+
+// 160x600 skyscrapers fixed in the empty margins left and right of the page. Shown only when the
+// window leaves room beside the widest content (max-w-5xl), so they never cover text.
+const SKYSCRAPER_KEY = "edd320cd0c2664d086f69191271cc022";
+const railQuery = "(min-width: 1400px) and (min-height: 700px)";
+function subscribeRails(onChange: () => void) {
+  const mq = window.matchMedia(railQuery);
+  mq.addEventListener("change", onChange);
+  return () => mq.removeEventListener("change", onChange);
+}
+
+export function AdsterraSideRails() {
+  const wide = useSyncExternalStore(subscribeRails, () => window.matchMedia(railQuery).matches, () => false);
+  if (!wide) return null;
+  const rail = (side: "left" | "right") => (
+    <div style={{ position: "fixed", top: "50%", [side]: 12, transform: "translateY(-50%)", zIndex: 30 }}>
+      <AdLabel />
+      <iframe title="Advertisement" srcDoc={bannerDoc(SKYSCRAPER_KEY, 160, 600)} width={160} height={600} scrolling="no" style={{ border: 0, display: "block" }} />
+    </div>
+  );
+  return <>{rail("left")}{rail("right")}</>;
+}
