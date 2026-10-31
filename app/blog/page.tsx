@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { posts, categories, formatDate, getCategoryLabel, getCategoryColor } from "@/lib/posts";
 import type { Metadata } from "next";
+import { AdsterraInline, AdsterraNative } from "@/components/Adsterra";
 
 export const metadata: Metadata = { title: "All Guides — Small Business Cybersecurity", description: "Browse all cybersecurity guides for small business.", alternates: { canonical: "/blog" } };
 
@@ -22,6 +23,7 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+        <AdsterraInline className="mb-8" />
         <div className="space-y-3">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}
@@ -45,6 +47,7 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+        <AdsterraNative className="mt-12" />
       </div>
     </div>
   );

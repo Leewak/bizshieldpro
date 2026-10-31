@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { posts, getFeaturedPosts, categories, formatDate, getCategoryLabel, getCategoryColor } from "@/lib/posts";
 import type { Metadata } from "next";
+import { AdsterraInline, AdsterraNative } from "@/components/Adsterra";
 
 export const metadata: Metadata = {
   title: "BizShield Pro — Cybersecurity Made Simple for Small Business",
@@ -59,6 +60,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="px-5"><AdsterraInline className="my-8" /></div>
+
       {/* Featured */}
       <section className="py-14">
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
@@ -90,6 +93,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <div className="px-5"><AdsterraInline className="my-8" /></div>
 
       {/* Latest */}
       <section className="py-10 pb-20" style={{ borderTop: "1px solid #0D1020" }}>
@@ -123,6 +128,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <div className="px-5 max-w-5xl mx-auto"><AdsterraNative className="my-10" /></div>
     </>
   );
 }
